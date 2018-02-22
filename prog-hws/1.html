@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+ <head>
+  <title>
+   Programming assignment 1
+  </title>
+  <style type="text/css">
+  .button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 13px/100% 'Microsoft yahei',Arial, Helvetica, sans-serif;
+    padding: .5em 1em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em; 
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  }
+    /* white */
+  .white {
+    color: #606060;
+    border: solid 1px #b7b7b7;
+    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+    background: -moz-linear-gradient(top,  #fff,  #ededed);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+  }
+  .white:hover {
+    background: #ededed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+    background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+  }
+  .white:active {
+    color: #999;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+    background: -moz-linear-gradient(top,  #ededed,  #fff);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
+  }
+</style>
+ </head>
+ <link="#0000ff" vlink="#800080">
+ <center>
+  <h3>
+  <strong><a href="https://www.cs.uml.edu/~wma/">Wei Ma</a><br>
+  Student ID: 01682087<br>
+  Major: <a href="http://www.cs.uml.edu/">Computer Science</a><br>
+  <a href="http://www.uml.edu/">University of Massachusetts Lowell, Lowell, MA</a></strong><br>
+  </h3>
+ </center>
+ <hr>
+ <body>
+  <h3>
+  Programming assignment 1: 2D Drawing
+  </h3>
+  <ul>
+
+<div id="demo">Click to choose one of primitives to draw.</div>
+<br>
+<div id='controls'>
+Primitives:
+<input class="button white" class="button white" id='line' type='button' value='Line' 
+onclick="location.href = 'https://www.cs.uml.edu/~wma/427546s2018/prog-hws/1/2d_line.html'"/>
+<input class="button white" id='circle' type='button' value='Circle' 
+onclick="location.href = 'https://www.cs.uml.edu/~wma/427546s2018/prog-hws/1/2d_circle.html'"/>
+<input class="button white" id='ellipse' type='button' value='Ellipse' 
+onclick="location.href = 'https://www.cs.uml.edu/~wma/427546s2018/prog-hws/1/2d_ellipse.html'"/>
+<input class="button white" id='rectangles' type='button' value='Rectangles' 
+onclick="location.href = 'https://www.cs.uml.edu/~wma/427546s2018/prog-hws/1/2d_rectangles.html'"/>
+<input class="button white" id='polygons' type='button' value='Polygons' 
+onclick="location.href = 'https://www.cs.uml.edu/~wma/427546s2018/prog-hws/1/2d_polygons.html'"/>
+<input class="button white" id='polylines' type='button' value='Polylines'
+onclick="location.href = 'https://www.cs.uml.edu/~wma/427546s2018/prog-hws/1/2d_polylines.html'"/>
+<br>
+<br>
+</div>
+</ul>
+<hr>
+<a href="../prog-hws.html">Back to programming assignment list</a>
+<hr>
+<em>
+
+ &copy;Wei Ma (Wei_Ma@student.uml.edu)<br>
+
+
+(<script type="text/javascript">
+<!--
+    lastmod = document.lastModified     // get string of last modified date
+    lastmoddate = Date.parse(lastmod)   // convert modified string to date
+    if (lastmoddate == 0) {               // unknown date (or January 1, 1970 GMT)
+       document.writeln("Last Modified: Unknown")
+    } else {
+       document.writeln("Last Modified: " + lastmod)
+    }// -->
+  </script>
+  <noscript>
+    Updated January 19, 2018
+  </noscript>)
+</em>
+ </body>
+</html>
