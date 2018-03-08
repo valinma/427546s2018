@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Programming assignment 2</title>
+<style>
+#controls {
+left: 25px;
+top: 25px;
+}
+#canvas {
+background: #ffffff;
+cursor: pointer;
+margin-left: 10px;
+margin-top: 10px;
+-webkit-box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+-moz-box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+-box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+}
+  .button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 13px/100% 'Microsoft yahei',Arial, Helvetica, sans-serif;
+    padding: .5em 1em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em; 
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  }
+  /* blue */
+  .blue {
+    color: #d9eef7;
+    border: solid 1px #0076a3;
+    background: #0095cd;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+    background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+  }
+    /* white */
+  .white {
+    color: #606060;
+    border: solid 1px #b7b7b7;
+    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+    background: -moz-linear-gradient(top,  #fff,  #ededed);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+  }
+  .white:hover {
+    background: #ededed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+    background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+  }
+  .white:active {
+    color: #999;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+    background: -moz-linear-gradient(top,  #ededed,  #fff);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
+  }
+    /* orange */
+  .orange {
+    color: #fef4e9;
+    border: solid 1px #da7c0c;
+    background: #f78d1d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+    background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+  }
+  .orange:hover {
+    background: #f47c20;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+    background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+  }
+  .orange:active {
+    color: #fcd3a5;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+    background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+  }
+    /* green */
+  .green {
+    color: #e8f0de;
+    border: solid 1px #538312;
+    background: #64991e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
+    background: -moz-linear-gradient(top,  #7db72f,  #4e7d0e);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
+  }
+  .green:hover {
+    background: #538018;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));
+    background: -moz-linear-gradient(top,  #6b9d28,  #436b0c);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b9d28', endColorstr='#436b0c');
+  }
+  .green:active {
+    color: #a9c08c;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4e7d0e), to(#7db72f));
+    background: -moz-linear-gradient(top,  #4e7d0e,  #7db72f);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e7d0e', endColorstr='#7db72f');
+  }
+</style>
+</style>
+</head>
+<link="#0000ff" vlink="#800080"> 
+<center>
+  <h3>
+  <strong><a href="https://www.cs.uml.edu/~wma/">Wei Ma</a><br>
+  Student ID: 01682087<br>
+  Major: <a href="http://www.cs.uml.edu/">Computer Science</a><br>
+  <a href="http://www.uml.edu/">University of Massachusetts Lowell, Lowell, MA</a></strong><br>
+  </h3>
+ </center>
+ <hr>
+ <body>
+  <h3>
+  Programming assignment 2: Question 1: draw fractal
+  </h3>
+  <ul>
+<body>
+
+<div id='controls'>
+Questions:
+<input class="button blue" id='Question_1' type='button' value='Question_1' 
+onclick="location.href = 'https://www.cs.uml.edu/~wma/427546s2018/prog-hws/2/Question_1.html'"/>
+<input class="button white" id='Question_2' type='button' value='Question_2' 
+onclick="location.href = 'https://www.cs.uml.edu/~wma/427546s2018/prog-hws/2/Question_2.html'"/>
+<input class="button green" id='eraseAllButton' type='button' value='Erase all' onclick ='eraseAll(event)'/>
+<br>
+<br>
+Primitive:<select id='inputPrimitive'>
+<option value='line' selected>line</option>
+<option value='polyline'>polyline</option>
+<option value='polygon'>polygon</option>
+<option value='rectangle'>rectangle</option>
+<option value='circle'>circle</option>
+<option value='ellipse'>ellipse</option>
+</select>
+Color: <select id='strokeStyleSelect'>
+<option value='red'>red</option>
+<option value='green'>green</option>
+<option value='blue'>blue</option>
+<option value='orange'>orange</option>
+<option value='cornflowerblue' selected>cornflowerblue</option>
+<option value='goldenrod'>goldenrod</option>
+<option value='navy'>navy</option>
+<option value='purple'>purple</option>
+</select>
+<br><br>
+Ratio( positive integer, how many fractal you want to create ):<input id="ratio" name="ratio">
+<br>
+<br>
+Iterations( positive integer, recommend not over 6 in case your browser breakdown ):<input id="iterations" name="iterations">
+<br>
+<br>
+<input class="button orange" id='draw' type='button' value='Click to Draw Fractal!' onclick ='drawFractal(event)'/>
+</div>
+<canvas id='canvas' width='800' height='600'>
+Canvas not supported
+</canvas>
+<script src = 'Question_1.js'></script>
+</ul>
+<hr>
+<em>
+
+ &copy;Wei Ma (Wei_Ma@student.uml.edu)<br>
+
+
+(<script type="text/javascript">
+<!--
+    lastmod = document.lastModified     // get string of last modified date
+    lastmoddate = Date.parse(lastmod)   // convert modified string to date
+    if (lastmoddate == 0) {               // unknown date (or January 1, 1970 GMT)
+       document.writeln("Last Modified: Unknown")
+    } else {
+       document.writeln("Last Modified: " + lastmod)
+    }// -->
+  </script>
+  <noscript>
+    Updated January 19, 2018
+  </noscript>)
+</em>
+</body>
+</html>
