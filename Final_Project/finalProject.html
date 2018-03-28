@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+ <head>
+    <style>
+    body { font-family: sans-serif }
+
+    fieldset { background-color: white; vertical-align: top }
+    fieldset.has-2-line-labels label { display: inline-block; text-align: center; }
+    #direct-manipulation fieldset { display: inline-block }
+
+    input[type=number] { max-width: 4em }
+
+    table caption { font-style: italic}
+    td.top { vertical-align: top }
+    td.top fieldset { margin-bottom: 0.5em }
+  </style>
+  <style type="text/css">
+  .button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 13px/100% 'Microsoft yahei',Arial, Helvetica, sans-serif;
+    padding: .5em 1em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em; 
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  }
+  /* orange */
+  .orange {
+    color: #fef4e9;
+    border: solid 1px #da7c0c;
+    background: #f78d1d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+    background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+  }
+  .orange:hover {
+    background: #f47c20;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+    background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+  }
+  .orange:active {
+    color: #fcd3a5;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+    background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+  }
+
+  fieldset { 
+    border:3px solid lightblue;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+  }
+
+  legend {
+    padding: 0.2em 0.5em;
+    border:2px solid lightblue;
+    color:mediumslateblue;
+    font-size:90%;
+    text-align:center;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+  }
+
+</style>
+  <title>
+   Final Project
+  </title>
+ </head>
+ <link="#0000ff" vlink="#800080">
+ <center>
+  <h3>
+  <strong><a href="https://www.cs.uml.edu/~wma/">Wei Ma</a><br>
+  Student ID: 01682087<br>
+  Major: <a href="http://www.cs.uml.edu/">Computer Science</a><br>
+  <a href="http://www.uml.edu/">University of Massachusetts Lowell, Lowell, MA</a></strong><br>
+  </h3>
+ </center>
+ <hr>
+ <body>
+  <h3>
+  Final Project: 
+  </h3>
+<b>I achieved :</b><br>
+1. Modeling: create and store a 3D object by draw three 2D "elevations" (front, top, side of "my dream house"). And create a 3D model (isometric) of the object from them.
+<br>
+2. Transform object: apply 3D (Translate/Rotate/Scale/SHear) transformations to the created object. (Still working on)
+<form>
+  <hr color="white">
+  <table style="text-align:center;">
+    <tr>
+      <td>
+        <fieldset>
+        <legend><b>Map</b></legend>
+        <table align="center" style="padding: 1px; border: 1px solid slateblue; border-radius: 8px; text-align:center;" >
+          <tr style = "padding: 1px; border: 1px solid slateblue; border-radius: 8px">
+            <td style = "padding: 14px; border: 1px solid slateblue; border-radius: 8px 1px 1px 1px">Front</td>
+            <td style = "padding: 14px; border: 1px solid slateblue; border-radius: 1px 8px 1px 1px">Side</td>
+          </tr>
+          <tr style = "padding: 1px; border: 1px solid slateblue; border-radius: 8px">
+            <td style = "padding: 14px; border: 1px solid slateblue; border-radius: 1px 1px 1px 8px">Top</td>
+            <td style = "padding: 14px; border: 1px solid slateblue; border-radius: 1px 1px 8px 1px">Isometric</td>
+          </tr>
+        </table>
+      </fieldset>
+      </td>
+      <td>
+        <section id="direct-manipulation">
+          <fieldset>
+            <legend><b>Transform object</b></legend>
+            <div style="color: red; margin-bottom: 0.5em">
+              Drag your mouse on the canvas below to do transformation.
+            </div>
+            <fieldset id="elevation-type" class="has-2-line-labels">
+              <legend><b>Which elevation?</b></legend>
+              <label><input type="radio" name="elevation" checked><br>Front</label>
+              <label><input type="radio" name="elevation"><br>Side</label>
+              <label><input type="radio" name="elevation"><br>Top</label>
+              <label><input type="radio" name="elevation"><br>Isometric</label>
+            </fieldset>
+            <fieldset id="transformation-type" class="has-2-line-labels">
+              <legend><b>Transformation type</b></legend>
+              <label><input type="radio" name="transform" checked><br>Translate</label>
+              <label><input type="radio" name="transform"><br>Rotate</label>
+              <label><input type="radio" name="transform"><br>Scale</label>
+              <label><input type="radio" name="transform"><br>Shear</label>
+            </fieldset>
+          </fieldset>
+        </section>
+      </td>
+    </tr>
+    <tr>
+      <td class="top">
+        <section>
+          <fieldset>
+            <legend><b>Build your House</b></legend>
+            <label>width=<input type="number" name="width" required value="200"></label><br>
+            <label>height=<input type="number" name="height" required value="200"></label><br>
+            <label>depth=<input type="number" name="depth" required value="200"></label><br>
+            <button class="button orange" type="submit">Build!</button>
+          </fieldset>
+
+          <fieldset class="transformation">
+            <legend><b>Transform Front</b></legend>
+            Translate: <label>x=<input type="number" value="0"></label>, <label>y=<input type="number" value="0"></label><br>
+            <label>Rotate: <input type="number" value="0"></label><br>
+            <label>Scale:  <input type="number" step="0.01" value="1"></label><br>
+            Shear: <label>x=<input type="number" step="0.01" value="0"></label>, <label>y=<input type="number" step="0.01" value="0"></label><br>
+            <button class="button orange" type="submit">Transform!</button>
+          </fieldset>
+
+          <fieldset class="transformation">
+            <legend><b>Transform Side</b></legend>
+            Translate: <label>x=<input type="number" value="0"></label>, <label>y=<input type="number" value="0"></label><br>
+            <label>Rotate: <input type="number" value="0"></label><br>
+            <label>Scale:  <input type="number" step="0.01" value="1"></label><br>
+            Shear: <label>x=<input type="number" step="0.01" value="0"></label>, <label>y=<input type="number" step="0.01" value="0"></label><br>
+            <button class="button orange" type="submit">Transform!</button>
+          </fieldset>
+
+          <fieldset class="transformation">
+            <legend><b>Transform Top</b></legend>
+            Translate: <label>x=<input type="number" value="0"></label>, <label>y=<input type="number" value="0"></label><br>
+            <label>Rotate: <input type="number" value="0"></label><br>
+            <label>Scale:  <input type="number" step="0.01" value="1"></label><br>
+            Shear: <label>x=<input type="number" step="0.01" value="0"></label>, <label>y=<input type="number" step="0.01" value="0"></label><br>
+            <button class="button orange" type="submit">Transform!</button>
+          </fieldset>
+
+          <fieldset class="transformation">
+            <legend><b>Isometric</b></legend>
+            Translate: <label>x=<input type="number" value="0"></label>, <label>y=<input type="number" value="0"></label>, <br><label>z=<input type="number" value="0"></label><br>
+            <label>Rotate: <input type="number" value="0"></label><br>
+            <label>Scale:  <input type="number" step="0.01" value="1"></label><br>
+            Shear: <label>x=<input type="number" step="0.01" value="0"></label>, <label>y=<input type="number" step="0.01" value="0">, <br><label>z=<input type="number" step="0.01" value="0"></label><br>
+            <button class="button orange" type="submit">Transform!</button>
+          </fieldset>
+        </section>
+
+      </td>
+      <td class="top">
+        <!--<svg id="canvas" style="border: solid black 1px; background-color: lightgray" xmlns="http://www.w3.org/2000/svg"></svg>-->
+        <canvas id="canvas" style="border: solid gray 4px; border-radius: 8px"></canvas>
+      </td>
+    </tr>
+  </table>
+
+</form>
+<br>
+<script src="finalProject/Angle.js"></script>
+<script src="finalProject/Vertex3D.js"></script>
+<script src="finalProject/Matrix.js"></script>
+<script src="finalProject/ProjectionMatrix.js"></script>
+<script src="finalProject/Transformable.js"></script>
+<script src="finalProject/Color.js"></script>
+<script src="finalProject/Face.js"></script>
+<script src="finalProject/House.js"></script>
+<script src="finalProject/MyGL.js"></script>
+<script src="finalProject/Inputs.js"></script>
+<script src="finalProject/RadioButton.js"></script>
+<script src="finalProject/TransformFieldset.js"></script>
+<script src="finalProject/CanvasManipulation.js"></script>
+<script src="finalProject/finalProject.js"></script>
+
+<hr color="white">
+
+
+<hr>
+<a href="../427546s2018.html">Back to assignment list</a>
+<hr>
+<em>
+
+ &copy;Wei Ma (Wei_Ma@student.uml.edu)<br>
+
+
+(<script type="text/javascript">
+<!--
+    lastmod = document.lastModified     // get string of last modified date
+    lastmoddate = Date.parse(lastmod)   // convert modified string to date
+    if (lastmoddate == 0) {               // unknown date (or January 1, 1970 GMT)
+       document.writeln("Last Modified: Unknown")
+    } else {
+       document.writeln("Last Modified: " + lastmod)
+    }// -->
+  </script>
+  <noscript>
+    Updated January 19, 2018
+  </noscript>)
+</em>
+ </body>
+</html>
