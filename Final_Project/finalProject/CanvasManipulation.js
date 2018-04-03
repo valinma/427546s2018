@@ -32,6 +32,7 @@ class CanvasManipulation {
 
 				let transformFieldset = TransformFieldset.current();
 				let transformIndex = RadioButton.checkedIndex("transformation-type");
+				let thDtransformIndex = RadioButton.checkedIndex("3D-transformation-type");
 				if (transformIndex === 0) {
 					transformFieldset.translatePlus(dx, -dy);
 				}
@@ -43,6 +44,19 @@ class CanvasManipulation {
 				}
 				else if (transformIndex === 3) {
 					transformFieldset.shearPlus(dx/100, -dy/100);
+				}
+				
+				if (thDtransformIndex === 0){
+					transformFieldset.translatePlus(dx, -dy);
+				}
+				else if (thDtransformIndex === 1){
+					transformFieldset.thD_rotatePlus(dx, -dy);
+				}
+				else if (thDtransformIndex === 2){
+					transformFieldset.thD_scalePlus(dx/50);
+				}
+				else if (thDtransformIndex === 3){
+					transformFieldset.thD_shearPlus(dx/100, -dy/100);
 				}
 				_this.houseDrawer.drawHouseFromUserInput();
 

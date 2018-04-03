@@ -78,8 +78,8 @@ class HouseDrawer {
 		/** axonometric_isometric **/
 		house.resetTransformation();
 		// house.scale(0.6);
-		house.applyMatrix(ProjectionMatrix.axonometric_isometric());
-		house.transformPlaneXYZ_array(isoTransforamtion);
+		house.applyMatrix(ProjectionMatrix.axonometric_isometric(isoTransforamtion));
+		house.transformPlaneXY_array_isometric(isoTransforamtion);
 		house.translate(new Vertex3D(this.canvasWidth/4*3, -this.canvasHeight/4*3, 0));
 		house.draw(canvas);
 		this.canvas.drawCube(house.transformation);

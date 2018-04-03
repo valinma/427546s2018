@@ -21,10 +21,11 @@ class ProjectionMatrix {
 		return m;
 	}
 
-	static axonometric_isometric() {
+	static axonometric_isometric(t) {
 		let m = Matrix.identity;
-		m = Matrix.rotateY(m, 45);
-		m = Matrix.rotateX(m, -35.264);
+		m = Matrix.rotateY(m, t[2]);
+		m = Matrix.rotateX(m, t[3]);
+		m = Matrix.rotateZ(m, t[4]);
 		return m;
 	}
 

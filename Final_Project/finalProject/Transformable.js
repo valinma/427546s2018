@@ -52,13 +52,26 @@ class Transformable {
 	}
 
 	transformPlaneXY_array(t) {
-		let dx = t[0], dy = t[1], rotation = t[2], scale = t[3], shearX = t[4], shearY = t[5];
-		this.transformPlaneXY(dx, dy, rotation, scale, shearX, shearY)
+		let dx = t[0], dy = t[1], rotation_z = t[2], scale = t[3], shearX = t[4], shearY = t[5];
+		this.transformPlaneXY(dx, dy, rotation_z, scale, shearX, shearY)
 	}
-	transformPlaneXY(dx, dy, rotation, scale, shearX, shearY) {
+	transformPlaneXY(dx, dy, rotation_z, scale, shearX, shearY) {
 		this.scale(scale);
 		this.shearXY(shearX, shearY);
-		this.rotateZ(rotation);
+		this.rotateZ(rotation_z);
+		this.translate(new Vertex3D(dx, dy, 0));
+	}
+
+	transformPlaneXY_array_isometric(t) {
+		let dx = t[0], dy = t[1], rotation_x = t[2], rotation_y = t[3], rotation_z = t[4], scale = t[5], shearX = t[6], shearY = t[7];
+		this.transformPlaneXY_isometric(dx, dy, rotation_x, rotation_y, rotation_z, scale, shearX, shearY);
+	}
+	transformPlaneXY_isometric(dx, dy, rotation_x, rotation_y, rotation_z, scale, shearX, shearY) {
+		this.scale(scale);
+		this.shearXY(shearX, shearY);
+		this.rotateX(rotation_x);
+		this.rotateY(rotation_y);
+		this.rotateZ(rotation_z);
 		this.translate(new Vertex3D(dx, dy, 0));
 	}
 
