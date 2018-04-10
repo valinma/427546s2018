@@ -114,7 +114,10 @@
 1. Modeling: create and store a 3D object by draw three 2D "elevations" (front, top, side of "my dream house"). And create a 3D model (isometric) of the object from them.<br>
 2. Transform object: apply 3D (Translate/Rotate/Scale/SHear) transformations to the created object.<br>
 3. Viewing: view your created object (Isometric) from multiple views.<br>
-4. Transform camera and light sources(s). Click the button: <a href = "../427546s2018/finalProject/finalProject_Camera.html"><button class="button white">Camera</button></a>   <a href = "../427546s2018/finalProject/finalProject_light.html"><button class="button white">Light</button></a>
+4. Transform camera and light sources(s). Click the button: <a href = "../427546s2018/finalProject/finalProject_Camera.html"><button class="button white">Camera</button></a>   <a href = "../427546s2018/finalProject/finalProject_light.html"><button class="button white">Light</button></a><br>
+5. Generate different projections of the objects (dimetric, trimetric, oblique, perspective 1 point, perspective 2 point, perspective 3 point).<br>
+6. Edit/Change perspective projection vanishing points (1, 2, 3).<br>
+7. Create texture mappings for the object. <a href = "../427546s2018/finalProject/finalProject_Mapping.html"><button class="button white">Mapping</button></a>
 <form>
   <hr color="white">
   <table style="text-align:center;">
@@ -219,8 +222,77 @@
         <canvas id="canvas" style="border: solid gray 4px; border-radius: 8px"></canvas>
       </td>
     </tr>
-  </table>
+    <tr>
+     <td>
+     <fieldset>
+       <legend><b>Parallel</b></legend>
+       <table align="center" style="padding: 1px; border: 1px solid slateblue; border-radius: 8px; text-align:center;" >
+        <tr style = "padding: 1px; border: 1px solid slateblue; border-radius: 8px">
+            <td style = "padding: 14px; border: 1px solid slateblue; border-radius: 8px 1px 1px 1px">Dimetric</td>
+            <td style = "padding: 14px; border: 1px solid slateblue; border-radius: 1px 8px 8px 1px">Trimetric</td>
+        </tr>
+        <tr>
+            <td style = "padding: 14px; border: 1px solid slateblue; border-radius: 1px 1px 8px 8px">Oblique</td>
+        </tr>
+  	   </table>
+     </fieldset><br>
+     <fieldset>
+		<legend><b>Adjust oblique projection</b></legend>
+		<label>Top angle: <input type="number" value="20"></label><br>
+		<label>Side angle: <input type="number" value="10"></label><br>
+		<button class="button orange" type="submit">Adjust!</button>
+	 </fieldset>
+  	 </td>
+  	 <td>
+        <canvas id="canvas2" style="border: solid gray 4px; border-radius: 8px"></canvas>
+     </td>
+	</tr>
+	<tr>
+		<td>
+		<fieldset>
+		<legend><b>Perspective</b></legend>
+		<table align="center" style="padding: 1px; border: 1px solid slateblue; border-radius: 8px; text-align:center;" >
+		<tr style = "padding: 1px; border: 1px solid slateblue; border-radius: 8px">
+		    <td style = "padding: 14px; border: 1px solid slateblue; border-radius: 8px 1px 1px 1px">1 point</td>
+		    <td style = "padding: 14px; border: 1px solid slateblue; border-radius: 1px 8px 8px 1px">2 point</td>
+		</tr>
+		<tr>
+		    <td style = "padding: 14px; border: 1px solid slateblue; border-radius: 1px 1px 8px 8px">3 point</td>
+		</tr>
+		   </table>
+		</fieldset><br>
+		<fieldset>
+			<legend><b>Move 1 vanishing point</b></legend>
+			<label>Horizontal: <input type="number" value="20"></label><br>
+			<label>Vertical: <input type="number" value="0"></label><br>
+			<label>Depth: <input type="number" value="350"></label><br>
+			<button class="button orange" type="submit">Move!</button>
+		</fieldset><br>
 
+		<fieldset>
+			<legend><b>Move 2 vanishing points</b></legend>
+			<label>Horizontal: <input type="number" value="30"></label><br>
+			<label>Vertical: <input type="number" value="0"></label><br>
+			<label>X angle: <input type="number" value="-40"></label><br>
+			<label>Depth: <input type="number" value="350"></label><br>
+			<button class="button orange" type="submit">Move!</button>
+		</fieldset><br>
+
+		<fieldset>
+			<legend><b>Move 3 vanishing points</b></legend>
+			<label>Horizontal: <input type="number" value="50"></label><br>
+			<label>Vertical: <input type="number" value="0"></label><br>
+			<label>X angle: <input type="number" value="-40"></label><br>
+			<label>Y angle: <input type="number" value="40"></label><br>
+			<label>Depth: <input type="number" value="350"></label><br>
+			<button class="button orange" type="submit">Move!</button>
+		</fieldset><br>
+	  	 </td>
+	  	 <td>
+	        <canvas id="canvas3" style="border: solid gray 4px; border-radius: 8px"></canvas>
+	     </td>
+	</tr>
+  </table>
 </form>
 <br>
 <script src="finalProject/Angle.js"></script>
@@ -237,7 +309,8 @@
 <script src="finalProject/TransformFieldset.js"></script>
 <script src="finalProject/CanvasManipulation.js"></script>
 <script src="finalProject/finalProject.js"></script>
-
+<script src="finalProject/finalProject2.js"></script>
+<script src="finalProject/finalProject3.js"></script>
 <hr color="white">
 <hr>
 <a href="../427546s2018.html">Back to assignment list</a>
