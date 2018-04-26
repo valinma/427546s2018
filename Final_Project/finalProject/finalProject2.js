@@ -1,11 +1,11 @@
 class projectionDrawer {
 	constructor() {
-		this.canvasWidth = 900;
-		this.canvasHeight = 900;
-		this.canvasDepth = 900;
+		this.canvasWidth = 1100;
+		this.canvasHeight = 1100;
+		this.canvasDepth = 1100;
 
 		// this.canvas = this._setupCanvas();
-		this.canvas = new MyCanvas("canvas2", this.canvasWidth, this.canvasHeight, this.canvasDepth);
+		this.canvas = new MyCanvas("canvas", this.canvasWidth, this.canvasHeight, this.canvasDepth);
 		this.form = this._setupForm();
 
 		new CanvasManipulation(this.canvas.canvas, this.form, this);
@@ -23,7 +23,7 @@ class projectionDrawer {
 		let values = {};
 		values.all = Inputs.floatValues(this.form);
 		values.houseSpec = values.all.slice(0, 3);
-		values.obliqueAdjustment = values.all.slice(29, 31);
+		values.obliqueAdjustment = values.all.slice(3, 5);
 
 		// clear canvas
 		this.canvas.clearAll();

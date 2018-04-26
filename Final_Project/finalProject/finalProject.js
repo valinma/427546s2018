@@ -1,8 +1,8 @@
 class HouseDrawer {
 	constructor() {
-		this.canvasWidth = 900;
-		this.canvasHeight = 900;
-		this.canvasDepth = 900;
+		this.canvasWidth = 1100;
+		this.canvasHeight = 1100;
+		this.canvasDepth = 1100;
 
 		// this.canvas = this._setupCanvas();
 		this.canvas = new MyCanvas("canvas", this.canvasWidth, this.canvasHeight, this.canvasDepth);

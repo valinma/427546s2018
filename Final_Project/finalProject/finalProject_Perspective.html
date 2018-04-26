@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+ <head>
+    <style>
+    body { font-family: sans-serif }
+
+    fieldset { background-color: white; vertical-align: top }
+    fieldset.has-2-line-labels label { display: inline-block; text-align: center; }
+    #direct-manipulation fieldset { display: inline-block }
+
+    input[type=number] { max-width: 4em }
+
+    table caption { font-style: italic}
+    td.top { vertical-align: top }
+    td.top fieldset { margin-bottom: 0.5em }
+  </style>
+  <style type="text/css">
+  .button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 13px/100% 'Microsoft yahei',Arial, Helvetica, sans-serif;
+    padding: .5em 1em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em; 
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  }
+  /* orange */
+  .orange {
+    color: #fef4e9;
+    border: solid 1px #da7c0c;
+    background: #f78d1d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+    background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+  }
+  .orange:hover {
+    background: #f47c20;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+    background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+  }
+  .orange:active {
+    color: #fcd3a5;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+    background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+  }
+ /* white */
+  .white {
+    color: #606060;
+    border: solid 1px #b7b7b7;
+    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+    background: -moz-linear-gradient(top,  #fff,  #ededed);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+  }
+  .white:hover {
+    background: #ededed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+    background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+  }
+  .white:active {
+    color: #999;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+    background: -moz-linear-gradient(top,  #ededed,  #fff);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
+  }
+  fieldset { 
+    border:3px solid lightblue;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+  }
+
+  legend {
+    padding: 0.2em 0.5em;
+    border:2px solid lightblue;
+    color:mediumslateblue;
+    font-size:90%;
+    text-align:center;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+  }
+
+</style>
+  <title>
+   Final Project
+  </title>
+ </head>
+ <link="#0000ff" vlink="#800080">
+ <center>
+  <h3>
+  <strong><a href="https://www.cs.uml.edu/~wma/">Wei Ma</a><br>
+  Student ID: 01682087<br>
+  Major: <a href="http://www.cs.uml.edu/">Computer Science</a><br>
+  <a href="http://www.uml.edu/">University of Massachusetts Lowell, Lowell, MA</a></strong><br>
+  </h3>
+ </center>
+ <hr>
+ <body>
+  <h3>
+  Final Project: Perspective Projection
+  </h3>
+<form>
+  <hr color="white">
+  <table style="text-align:center;">
+  <tr>
+    <td>
+    <fieldset>
+    <legend><b>Perspective</b></legend>
+    <table align="center" style="padding: 1px; border: 1px solid slateblue; border-radius: 8px; text-align:center;" >
+    <tr style = "padding: 1px; border: 1px solid slateblue; border-radius: 8px">
+        <td style = "padding: 14px; border: 1px solid slateblue; border-radius: 8px 1px 1px 1px">1 point</td>
+        <td style = "padding: 14px; border: 1px solid slateblue; border-radius: 1px 8px 8px 1px">2 point</td>
+    </tr>
+    <tr>
+        <td style = "padding: 14px; border: 1px solid slateblue; border-radius: 1px 1px 8px 8px">3 point</td>
+    </tr>
+       </table>
+    </fieldset><br>
+       <fieldset>
+          <legend><b>Build your House</b></legend>
+          <label>width=<input type="number" name="width" required value="200"></label><br>
+          <label>height=<input type="number" name="height" required value="200"></label><br>
+          <label>depth=<input type="number" name="depth" required value="200"></label><br>
+          <button class="button orange" type="submit">Build!</button>
+       </fieldset><br>
+    <fieldset>
+      <legend><b>Move 1 vanishing point</b></legend>
+      <label>Horizontal: <input type="number" value="20"></label><br>
+      <label>Vertical: <input type="number" value="0"></label><br>
+      <label>Depth: <input type="number" value="350"></label><br>
+      <button class="button orange" type="submit">Move!</button>
+    </fieldset><br>
+
+    <fieldset>
+      <legend><b>Move 2 vanishing points</b></legend>
+      <label>Horizontal: <input type="number" value="30"></label><br>
+      <label>Vertical: <input type="number" value="0"></label><br>
+      <label>X angle: <input type="number" value="-40"></label><br>
+      <label>Depth: <input type="number" value="350"></label><br>
+      <button class="button orange" type="submit">Move!</button>
+    </fieldset><br>
+
+    <fieldset>
+      <legend><b>Move 3 vanishing points</b></legend>
+      <label>Horizontal: <input type="number" value="50"></label><br>
+      <label>Vertical: <input type="number" value="0"></label><br>
+      <label>X angle: <input type="number" value="-40"></label><br>
+      <label>Y angle: <input type="number" value="40"></label><br>
+      <label>Depth: <input type="number" value="350"></label><br>
+      <button class="button orange" type="submit">Move!</button>
+    </fieldset><br>
+       </td>
+       <td>
+          <canvas id="canvas" style="border: solid gray 4px; border-radius: 8px"></canvas>
+       </td>
+  </tr>
+  </table>
+</form>
+<br>
+<script src="Angle.js"></script>
+<script src="Vertex3D.js"></script>
+<script src="Matrix.js"></script>
+<script src="ProjectionMatrix.js"></script>
+<script src="Transformable.js"></script>
+<script src="Color.js"></script>
+<script src="Face.js"></script>
+<script src="House.js"></script>
+<script src="MyGL.js"></script>
+<script src="Inputs.js"></script>
+<script src="RadioButton.js"></script>
+<script src="TransformFieldset.js"></script>
+<script src="CanvasManipulation.js"></script>
+
+<script src="finalProject3.js"></script>
+
+<hr color="white">
+<hr>
+<a href="../finalProject.html">Back to final project</a>
+<hr>
+<em>
+
+ &copy;Wei Ma (Wei_Ma@student.uml.edu)<br>
+
+
+(<script type="text/javascript">
+<!--
+    lastmod = document.lastModified     // get string of last modified date
+    lastmoddate = Date.parse(lastmod)   // convert modified string to date
+    if (lastmoddate == 0) {               // unknown date (or January 1, 1970 GMT)
+       document.writeln("Last Modified: Unknown")
+    } else {
+       document.writeln("Last Modified: " + lastmod)
+    }// -->
+  </script>
+  <noscript>
+    Updated January 19, 2018
+  </noscript>)
+</em>
+ </body>
+</html>

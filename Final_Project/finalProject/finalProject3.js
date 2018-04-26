@@ -1,11 +1,11 @@
 class perspectiveDrawer {
 	constructor() {
-		this.canvasWidth = 1000;
-		this.canvasHeight = 1000;
-		this.canvasDepth = 1000;
+		this.canvasWidth = 1100;
+		this.canvasHeight = 1100;
+		this.canvasDepth = 1100;
 
 		// this.canvas = this._setupCanvas();
-		this.canvas = new MyCanvas("canvas3", this.canvasWidth, this.canvasHeight, this.canvasDepth);
+		this.canvas = new MyCanvas("canvas", this.canvasWidth, this.canvasHeight, this.canvasDepth);
 		this.form = this._setupForm();
 
 		new CanvasManipulation(this.canvas.canvas, this.form, this);
@@ -23,9 +23,9 @@ class perspectiveDrawer {
 		let values = {};
 		values.all = Inputs.floatValues(this.form);
 		values.houseSpec = values.all.slice(0, 3);
-		values.vanishingPointsMove1 = values.all.slice(31, 34);
-		values.vanishingPointsMove2 = values.all.slice(34, 38);
-		values.vanishingPointsMove3 = values.all.slice(38, 43);
+		values.vanishingPointsMove1 = values.all.slice(3, 6);
+		values.vanishingPointsMove2 = values.all.slice(6, 10);
+		values.vanishingPointsMove3 = values.all.slice(10, 15);
 
 		// clear canvas
 		this.canvas.clearAll();
